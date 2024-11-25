@@ -6,3 +6,18 @@
 }
 
 
+header {
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+  margin-top: 0;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #f8f6f6;
+}
+
+
+
