@@ -1,25 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // If you want to add internal navigation links
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'; // Social media icons
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light py-4">
+    <footer className="bg-dark text-light py-4 mt-4">
       <div className="container">
-        <div className="row">
-          <div className="col-md-6">
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-6">
             <h5 className="mb-3">Currency and Weather App</h5>
             <p>
               Track weather forecasts and currency rates with ease. Stay informed and updated anytime, anywhere.
             </p>
-          </div>
-          <div className="col-md-6">
-            <h5 className="mb-3">Quick Links</h5>
-            <ul className="list-unstyled">
-              <li><Link to="/" className="text-light">Home</Link></li>
-              <li><Link to="/weather" className="text-light">Weather</Link></li>
-              <li><Link to="/currency" className="text-light">Currency</Link></li>
-            </ul>
           </div>
         </div>
         <div className="row justify-content-center mt-4">

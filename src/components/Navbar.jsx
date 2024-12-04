@@ -1,16 +1,11 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import Header from './Header';
-import logo from '../assets/images/logo.png'; // Adjust the path based on your folder structure
-
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
-     
-
       {/* Navbar Section */}
-      <nav className="navbar navbar-dark bg-dark text-light navbar-expand-lg">
+      <nav className="navbar navbar-dark bg-dark text-light navbar-expand-sm">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -26,17 +21,32 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/" activeClassName="active" exact>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/currency" activeClassName="active">
+                <NavLink
+                  to="/currency"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
                   Currency
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/weather" activeClassName="active">
+                <NavLink
+                  to="/weather"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
                   Weather
                 </NavLink>
               </li>
@@ -44,12 +54,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-       {/* Header Section */}
-       <Header
-        title="Currency Converter and Weather Application"
-        subtitle="Track your finances and weather with ease"
-        logo={logo}
-      />
     </>
   );
 };

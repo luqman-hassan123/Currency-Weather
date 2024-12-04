@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="container-fluid p-0">
       {/* Hero Section */}
-      <div className="hero-section text-white text-center py-5" style={{ backgroundImage: 'url(https://via.placeholder.com/1920x600)' }}>
+      {/* <div className="hero-section text-white text-center py-5" style={{ backgroundImage: 'url(https://via.placeholder.com/1920x600)' }}>
         <div className="overlay d-flex align-items-center justify-content-center">
           <div className="hero-content">
             <h1 className="display-3 mb-3">Track Your Weather & Currency Data</h1>
@@ -15,7 +15,7 @@ const Home = () => {
             <Link to="/currency" className="btn btn-light btn-lg mx-2">Currency Rates</Link>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Information Section */}
       <div className="container text-center py-5">

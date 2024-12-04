@@ -19,5 +19,34 @@ header {
   color: #f8f6f6;
 }
 
+/* App.css */
+
+/* Ensure html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* App container using Flexbox */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes at least the full height of the viewport */
+}
+
+/* Content container to take available space */
+.App-content {
+  flex-grow: 1;  /* This ensures content expands to take up the remaining space */
+}
+
+/* Footer styles */
+footer {
+  background-color: #343a40;  /* Dark background for footer */
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto;  /* Push footer to the bottom */
+}
+
+
 
 
