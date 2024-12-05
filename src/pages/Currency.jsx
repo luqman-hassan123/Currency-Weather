@@ -5,7 +5,7 @@ import {
   selectRates,
   selectBaseCurrency,
   setBaseCurrency,
-} from '../redux/slices/currencySlice';
+} from '../redux/slices/CurrencySlice';
 
 const Currency = () => {
   const rates = useSelector(selectRates);

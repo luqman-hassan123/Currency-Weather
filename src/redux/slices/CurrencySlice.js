@@ -18,7 +18,7 @@ export const fetchCurrencyRates = createAsyncThunk(
   }
 );
 
-const currencySlice = createSlice({
+const CurrencySlice = createSlice({
   name: 'currency',
   initialState: {
     rates: {}, // To store the fetched rates
@@ -50,10 +50,10 @@ const currencySlice = createSlice({
   },
 });
 
-export const { setBaseCurrency } = currencySlice.actions;
+export const { setBaseCurrency } = CurrencySlice.actions;
 export const selectRates = (state) => state.currency.rates;
 export const selectBaseCurrency = (state) => state.currency.baseCurrency;
 export const selectStatus = (state) => state.currency.status;
 export const selectError = (state) => state.currency.error;
 
-export default currencySlice.reducer;
+export default CurrencySlice.reducer;
