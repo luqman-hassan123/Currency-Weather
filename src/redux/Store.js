@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import currencyReducer from './slices/currencySlice';
-import weatherReducer from './slices/weatherSlice';
+import weatherReducer from './slices/WeatherSlice';
+import currencyReducer from './slices/CurrencySlice';
+
 
 const store = configureStore({
   reducer: {
