@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const fetchCurrencyRates = createAsyncThunk(
   'currency/fetchRates',
   async (baseCurrency = 'USD') => {
-    const apiKey = '6e772b3429a9f4ca0c6cb5eb'; // Replace with your actual API key
+    const apiKey = '6e772b3429a9f4ca0c6cb5eb'; // API key
     const response = await fetch(
       `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`
     );
@@ -31,6 +31,9 @@ const currencySlice = createSlice({
       state.baseCurrency = action.payload; // Update the base currency
     },
   },
+
+  // Handles additional cases, particularly the lifecycle of
+  //  fetchCurrencyRates (pending, fulfilled, rejected).
   extraReducers: (builder) => {
     builder
       .addCase(fetchCurrencyRates.pending, (state) => {

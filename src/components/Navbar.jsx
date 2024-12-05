@@ -19,7 +19,7 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav fs-5">
               <li className="nav-item">
                 <NavLink
                   to="/"

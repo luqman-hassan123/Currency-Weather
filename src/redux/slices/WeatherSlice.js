@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const fetchWeatherData = createAsyncThunk(
   'weather/fetchWeather',
   async (city) => {
-    const API_KEY = 'your_weather_api_key';
+    const API_KEY = '5e8d32f2e85fe4350115b1352459a464';
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
     );
@@ -17,7 +17,7 @@ const weatherSlice = createSlice({
   name: 'weather',
   initialState: {
     data: null,
-    status: 'idle', // idle | loading | succeeded | failed
+    status: 'idle', //track API call status: idle | loading | succeeded | failed
     error: null,
   },
   reducers: {},
@@ -27,12 +27,12 @@ const weatherSlice = createSlice({
         state.status = 'loading';
       })
       .addCase(fetchWeatherData.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.data = action.payload;
+        state.status = 'succeeded';    // Set status to succeeded on success
+        state.data = action.payload;   // Update state with the fetched weather data
       })
       .addCase(fetchWeatherData.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.error.message;
+        state.status = 'failed';                  // Set status to failed on error
+        state.error = action.error.message;     // Capture the error message
       });
   },
 });
